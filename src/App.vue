@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <section>
+      <friend-nav/>
+      <friend-form/>
+      <friend-card/>
+      <friend-card/>
+    </section>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+import Navbar from './components/NavView.vue';
+import Form from './components/FormView.vue'
+import Card from './components/CardView.vue';
+export default{
+    components:{
+      'friend-nav' :Navbar,
+      'friend-form' : Form,
+      'friend-card' : Card,
+    }
 }
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app{
+    font-family: sans-serif;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid green;
+  }
 </style>
